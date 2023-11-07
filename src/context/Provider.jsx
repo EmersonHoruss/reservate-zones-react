@@ -1,34 +1,11 @@
 import React, { useState } from "react";
 import { Context } from "./Context";
+import inputsData from "../data/inputs";
 
 const Provider = ({ children }) => {
-  const [place, setPlace] = useState("");
-  const [price, setPrice] = useState(0);
-  const [name, setName] = useState("");
-  const [rooms, setRooms] = useState(0);
-  const [people, setPeople] = useState(0);
-  const [days, setDays] = useState(0);
-  const total = () => {
-    return 0;
-  };
+  const [inputs, setInputs] = useState(inputsData);
   return (
-    <Context.Provider
-      value={{
-        place,
-        setPlace,
-        price,
-        setPrice,
-        name,
-        setName,
-        rooms,
-        setRooms,
-        people,
-        setPeople,
-        days,
-        setDays,
-        total,
-      }}
-    >
+    <Context.Provider value={{ inputs, setInputs }}>
       {children}
     </Context.Provider>
   );
