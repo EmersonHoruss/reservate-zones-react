@@ -1,5 +1,7 @@
 export const constraintsTypes = {
     required: "required",
     min: "min",
-    max: "max"
+    max: "max",
+    minLength: "minLength",
+    maxLength: "maxLength"
 }

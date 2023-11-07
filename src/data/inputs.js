@@ -1,58 +1,63 @@
 const inputs = {
     zone: {
         label: "Select zone to visit",
-        watchText: null,
+        description: null,
         constraints: {
             required: true,
             min: null,
             max: null,
         },
         value: null,
-        activated: true
+        activated: false,
+        type: "radio"
     },
     name: {
         label: "Write your name",
-        watchText: " is your user name",
+        description: " is your user name",
         constraints: {
             required: true,
-            min: null,
-            max: null,
+            minLength: 2,
+            maxLength: 45,
         },
         value: null,
-        activated: false
+        activated: false,
+        type: "text"
     },
     rooms: {
         label: "¿How many rooms do you want?",
-        watchText: "rooms",
+        description: " rooms",
         constraints: {
             required: true,
             min: 1,
             max: 10,
         },
         value: null,
-        activated: false
+        activated: false,
+        type: "number"
     },
     people: {
         label: "How many people are?",
-        watchText: "people",
+        description: " people",
         constraints: {
             required: true,
             min: 1,
             max: 7,
         },
         value: null,
-        activated: false
+        activated: false,
+        type: "number"
     },
     days: {
         label: "Select the number of days",
-        watchText: "days",
+        description: " days",
         constraints: {
             required: true,
             min: 2,
             max: 7,
         },
         value: null,
-        activated: false
+        activated: false,
+        type: "number"
     },
 }
 
