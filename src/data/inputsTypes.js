@@ -6,7 +6,7 @@ export const inputTypes = {
     days: "days",
 }
 
-export const inputOrder = [inputTypes.name, inputTypes.rooms, inputTypes.people, inputTypes.days]
+export const inputOrder = [inputTypes.zone, inputTypes.name, inputTypes.rooms, inputTypes.people, inputTypes.days]
 
 export const getNextInputType = (inputType) => {
     const nextIndex = inputOrder.findIndex(currentInputType => currentInputType === inputType) + 1

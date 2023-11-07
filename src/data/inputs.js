@@ -8,7 +8,7 @@ const inputs = {
             max: null,
         },
         value: null,
-        activated: false,
+        activated: true,
         type: "radio"
     },
     name: {

@@ -1,4 +1,5 @@
 import React from "react";
+import Summary from "./Summary";
 
 function ButtonsManager() {
   const back = () => {
@@ -8,7 +9,7 @@ function ButtonsManager() {
     console.log("new");
   };
   const print = () => {
-    console.log("print");
+    window.print()
   };
   return (
     <div className="flex gap-4">
