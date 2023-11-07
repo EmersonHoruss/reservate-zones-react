@@ -12,7 +12,7 @@ const Summary = () => {
     return price * rooms * people * days;
   };
   return (
-    <details open>
+    <details open className="print">
       <summary>Summary</summary>
       <div className="flex flex-col pl-4">
         {Object.keys(inputs).map((inputType) => {

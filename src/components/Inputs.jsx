@@ -59,6 +59,7 @@ const Inputs = () => {
             className="border-2"
             autoFocus
             autoComplete="off"
+            defaultValue={getCurrentInput().value}
             {...register(getCurrentInputType(), getCurrentInput().constraints)}
           />
           <Constraint

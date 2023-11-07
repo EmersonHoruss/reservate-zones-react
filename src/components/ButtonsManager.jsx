@@ -1,15 +1,17 @@
-import React from "react";
-import Summary from "./Summary";
+import React, { useContext } from "react";
+import { Context } from "../context/Context";
+import inputsFromData from "../data/inputs";
 
 function ButtonsManager() {
+  const { inputs, setInputs } = useContext(Context);
   const back = () => {
-    console.log("back");
+    setInputs({ ...inputs, days: { ...inputs.days, activated: true } });
   };
   const _new = () => {
-    console.log("new");
+    setInputs({ ...inputsFromData });
   };
   const print = () => {
-    window.print()
+    window.print();
   };
   return (
     <div className="flex gap-4">
