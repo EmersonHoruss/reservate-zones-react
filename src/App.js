@@ -1,13 +1,13 @@
 import './App.css';
 import Provider from './context/Provider';
-import Router from './router/Router';
+import Main from './pages/Main';
 import { BrowserRouter } from "react-router-dom"
 
 function App() {
   return (
     <BrowserRouter>
       <Provider>
-        <Router />
+       <Main/> 
       </Provider>
     </BrowserRouter>
   );

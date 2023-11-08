@@ -16,3 +16,15 @@ export const getNextInputType = (inputType) => {
 export const isTheLastInput = (inputType) => {
     return inputType === inputOrder[inputOrder.length - 1]
 }
+
+export const currentInput = (inputs) => {
+    for (const inputType in inputs) {
+        const input = inputs[inputType];
+        if (input.activated) {
+            const newInput = {};
+            newInput[inputType] = input;
+            return newInput;
+        }
+    }
+    return null;
+};

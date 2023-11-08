@@ -10,7 +10,8 @@ const Inputs = () => {
     handleSubmit,
     formState: { errors },
     watch,
-    reset,
+    resetField,
+    setFocus,
   } = useForm();
   const { inputs, setInputs } = useContext(Context);
   const handleMySubmit = (form) => {
@@ -27,7 +28,8 @@ const Inputs = () => {
       };
     }
     setInputs({ ...newInputs });
-    reset();
+    setFocus(getCurrentInputType());
+    resetField(getCurrentInputType());
   };
   const getCurrentInputType = () => {
     return Object.keys(inputs).find((inputType) => inputs[inputType].activated);
